@@ -1980,3 +1980,17 @@ footer {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
 }
+/* =====================================================
+   MOBILE ARROW FIX
+   Prevent iPhone Safari from rendering ↗ as emoji
+   ===================================================== */
+
+.approach-arrow,
+.item-arrow {
+  font-family: "DM Sans", sans-serif !important;
+  font-style: normal !important;
+  font-weight: 500;
+  line-height: 1;
+  font-variant-emoji: text;
+  -webkit-font-smoothing: antialiased;
+}
