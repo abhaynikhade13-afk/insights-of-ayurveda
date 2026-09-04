@@ -1886,3 +1886,23 @@ footer {
     font-size: 17px;
   }
 }
+/* =====================================================
+   INSIGHTS BRAND COLOUR REFINEMENT
+   COLOUR CHANGES ONLY — DO NOT ALTER LAYOUT
+   ===================================================== */
+
+:root {
+  --green-deep: #063B35;
+  --green-dark: #084C42;
+  --green: #087A68;
+  --green-soft: #159B82;
+
+  --lime: #C8FF18;
+  --lime-soft: #D9FF63;
+
+  --cream: #F5F6EE;
+  --cream-soft: #EEF2E8;
+
+  --ink: #17221C;
+  --ink-soft: #26332B;
+}
