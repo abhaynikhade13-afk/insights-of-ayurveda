@@ -1906,3 +1906,47 @@ footer {
   --ink: #17221C;
   --ink-soft: #26332B;
 }
+/* =====================================================
+   LOGO REFINEMENT — BLUE + LIME BRAND INTEGRATION
+   ===================================================== */
+
+.brand-mark-image {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  flex: 0 0 38px;
+
+  /* Softer, more premium shape */
+  border-radius: 11px;
+
+  /* Connects the logo visually to the website green */
+  box-shadow: 0 0 0 2px var(--green-dark);
+}
+
+/* Footer logo */
+.footer-brand .brand-mark-image {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border-radius: 11px;
+  box-shadow: 0 0 0 2px var(--green-dark);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .brand-mark-image {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+    border-radius: 10px;
+  }
+
+  .footer-brand .brand-mark-image {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+    border-radius: 10px;
+  }
+}
