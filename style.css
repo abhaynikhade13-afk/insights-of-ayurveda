@@ -2700,3 +2700,243 @@ img {
     width: calc(100% - 32px);
   }
 }
+/* =========================================================
+   CARE JOURNEY / YOUR FIRST VISIT
+   Mobile-first alignment + clean Insights theme
+   ========================================================= */
+
+.process-section {
+  background: #f6f7f1;
+  color: #202522;
+
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(420px, 1.15fr);
+  gap: clamp(50px, 8vw, 120px);
+
+  padding: clamp(80px, 9vw, 140px) clamp(24px, 7vw, 100px);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ---------- LEFT INTRO ---------- */
+
+.process-intro {
+  align-self: start;
+  position: sticky;
+  top: 100px;
+}
+
+.process-intro .eyebrow {
+  margin-bottom: 28px;
+  color: #168c68;
+}
+
+.process-intro h2 {
+  margin: 0;
+  max-width: 500px;
+
+  font-size: clamp(46px, 5vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 400;
+}
+
+.process-intro h2 em {
+  color: #168c68;
+  font-family: inherit;
+}
+
+
+/* ---------- RIGHT STEPS ---------- */
+
+.process-steps {
+  width: 100%;
+  border-top: 1px solid rgba(32, 37, 34, 0.16);
+}
+
+.process-step {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+
+  column-gap: 28px;
+  align-items: start;
+
+  padding: 34px 0;
+
+  border-bottom: 1px solid rgba(32, 37, 34, 0.16);
+
+  transition:
+    background 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+/* Number */
+
+.process-step > span {
+  color: #168c68;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+
+  padding-top: 5px;
+}
+
+/* Heading */
+
+.process-step h3 {
+  margin: 0 0 10px;
+
+  color: #202522;
+
+  font-size: clamp(21px, 2vw, 27px);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+/* Description */
+
+.process-step p {
+  margin: 0;
+
+  max-width: 620px;
+
+  color: #69736e;
+
+  font-size: 17px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* Subtle interaction */
+
+.process-step:hover {
+  padding-left: 10px;
+}
+
+.process-step:hover > span {
+  color: #c9ff32;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .process-section {
+    display: block;
+
+    padding: 78px 24px 88px;
+
+    max-width: 100%;
+  }
+
+  /* No sticky behaviour on phone */
+
+  .process-intro {
+    position: static;
+    margin-bottom: 52px;
+  }
+
+  .process-intro .eyebrow {
+    margin-bottom: 24px;
+  }
+
+  .process-intro h2 {
+    max-width: 100%;
+
+    font-size: clamp(43px, 12vw, 62px);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+  }
+
+  /* Steps */
+
+  .process-steps {
+    width: 100%;
+  }
+
+  .process-step {
+    grid-template-columns: 46px minmax(0, 1fr);
+
+    column-gap: 16px;
+
+    padding: 28px 0;
+  }
+
+  .process-step > span {
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    padding-top: 4px;
+  }
+
+  .process-step h3 {
+    font-size: 22px;
+    line-height: 1.2;
+
+    margin-bottom: 9px;
+  }
+
+  .process-step p {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  /* Remove desktop hover movement on touch */
+
+  .process-step:hover {
+    padding-left: 0;
+  }
+
+  .process-step:hover > span {
+    color: #168c68;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .process-section {
+    padding: 68px 20px 76px;
+  }
+
+  .process-intro {
+    margin-bottom: 42px;
+  }
+
+  .process-intro .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+  }
+
+  .process-intro h2 {
+    font-size: 44px;
+  }
+
+  .process-step {
+    grid-template-columns: 38px minmax(0, 1fr);
+    column-gap: 14px;
+
+    padding: 25px 0;
+  }
+
+  .process-step > span {
+    font-size: 12px;
+  }
+
+  .process-step h3 {
+    font-size: 20px;
+  }
+
+  .process-step p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+}
