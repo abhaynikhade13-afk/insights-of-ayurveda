@@ -1806,3 +1806,20 @@ footer {
   }
 
 }
+/* INSIGHTS ICON — SMALL BRAND MARK */
+.brand-mark-image {
+  width: 31px;
+  height: 31px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  flex: 0 0 31px;
+}
+
+@media (max-width: 600px) {
+  .brand-mark-image {
+    width: 27px;
+    height: 27px;
+    flex-basis: 27px;
+  }
+}
