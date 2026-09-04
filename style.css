@@ -1950,3 +1950,33 @@ footer {
     border-radius: 10px;
   }
 }
+/* =====================================================
+   EDITORIAL HEADING SYSTEM
+   DM SANS + PLAYFAIR DISPLAY
+   ===================================================== */
+
+/* Font 1 — modern sans */
+.heading-sans {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Font 2 — elegant editorial serif */
+.approach-intro h2 em,
+.care-section .section-heading h2 em,
+.doctor-copy h2 em,
+.process-intro h2 em,
+.service-strip h2 em,
+.statement h2 em,
+.cta h2 em {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* CTA — highlight the doctor's name */
+.cta-doctor-name {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+}
