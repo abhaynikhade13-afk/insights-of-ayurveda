@@ -1995,23 +1995,53 @@ footer {
   -webkit-font-smoothing: antialiased;
 }
 /* =====================================================
-   HERO — DR. RUCHIKA HIGHLIGHT
+   DR. RUCHIKA — SUBTLE BRUSH HIGHLIGHT
    ===================================================== */
 
 .hero-doctor-highlight {
+  position: relative;
+  display: inline;
   font-weight: 700;
   color: inherit;
+  z-index: 0;
+  padding: 0 3px;
+}
 
-  /* Neon lime / mint marker behind the text */
-  background: linear-gradient(
-    to top,
-    rgba(200, 255, 24, 0.25) 0%,
-    rgba(200, 255, 24, 0.25) 55%,
-    transparent 55%
+/* Soft irregular brush stroke behind the text */
+.hero-doctor-highlight::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  left: -3px;
+  right: -5px;
+  bottom: 8%;
+  height: 45%;
+
+  background: rgba(200, 255, 24, 0.25);
+
+  /* Irregular brush-like edges */
+  clip-path: polygon(
+    1% 25%,
+    8% 12%,
+    18% 20%,
+    30% 8%,
+    43% 18%,
+    56% 10%,
+    69% 19%,
+    82% 8%,
+    94% 17%,
+    100% 5%,
+    98% 78%,
+    88% 88%,
+    75% 76%,
+    61% 91%,
+    47% 80%,
+    34% 94%,
+    20% 82%,
+    8% 90%,
+    0% 72%
   );
 
-  padding: 0 3px 2px;
-
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  transform: rotate(-1deg);
 }
