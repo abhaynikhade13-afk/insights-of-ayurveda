@@ -2018,7 +2018,7 @@ footer {
   bottom: 8%;
   height: 45%;
 
-  background: rgba(200, 255, 24, 0.25);
+  background: rgba(200, 255, 24, 0.45);
 
   /* Irregular brush-like edges */
   clip-path: polygon(
