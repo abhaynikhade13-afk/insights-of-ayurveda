@@ -1806,3 +1806,45 @@ footer {
   }
 
 }
+/* =========================================
+   INSIGHTS OF AYURVEDA — MINI BRAND MARK
+   ========================================= */
+
+.insights-footer-mark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  opacity: 0.9;
+}
+
+.insights-footer-mark img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.insights-footer-mark span {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .insights-footer-mark {
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  .insights-footer-mark img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .insights-footer-mark span {
+    font-size: 12px;
+  }
+}
