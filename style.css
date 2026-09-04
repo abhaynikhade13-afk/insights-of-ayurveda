@@ -1950,3 +1950,16 @@ footer {
     border-radius: 10px;
   }
 }
+/* HERO WORD HIGHLIGHT — PERSONAL */
+.hero-highlight {
+  color: inherit;
+  background: linear-gradient(
+    to top,
+    var(--lime) 0%,
+    var(--lime) 42%,
+    transparent 42%
+  );
+  padding: 0 5px 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
