@@ -411,8 +411,8 @@ main > section.approach-section[id="approach"] {
   display: none;
 }
 
-main > section.doctor-section {
-  display: none;
+main > section.approach-section[id="approach"] {
+  display: block;
 }
 
 
