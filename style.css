@@ -3212,3 +3212,332 @@ img {
     height: 29px;
   }
 }
+/* =========================================================
+   FINAL CTA — START YOUR CONSULTATION
+   ========================================================= */
+
+.cta {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 105px 7vw;
+
+  background:
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(18, 140, 97, 0.42),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 65% 90%,
+      rgba(217, 255, 63, 0.055),
+      transparent 30%
+    ),
+    linear-gradient(
+      120deg,
+      #202321 0%,
+      #173126 52%,
+      #0b5f45 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* subtle fading glow */
+
+.cta::before {
+  content: "";
+
+  position: absolute;
+  width: 520px;
+  height: 520px;
+
+  right: -180px;
+  top: -220px;
+
+  border-radius: 50%;
+
+  background: rgba(217,255,63,0.045);
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+
+.cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ---------- CTA TEXT ---------- */
+
+.cta .eyebrow {
+  margin-bottom: 22px;
+
+  color: #d9ff3f;
+}
+
+
+.cta h2 {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: .94;
+
+  letter-spacing: -.045em;
+  font-weight: 400;
+}
+
+
+.cta h2 em {
+  color: #d9ff3f;
+  font-family: inherit;
+}
+
+
+.cta-description {
+  max-width: 560px;
+
+  margin: 25px 0 0;
+
+  color: rgba(255,255,255,.72);
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* ---------- CTA ACTIONS ---------- */
+
+.cta-actions {
+  flex: 0 0 280px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+
+.cta-actions .button {
+  min-width: 230px;
+
+  text-align: center;
+}
+
+
+.cta-actions .light {
+  background: #d9ff3f;
+  color: #202321;
+
+  border: 1px solid #d9ff3f;
+}
+
+
+.cta-actions .light:hover {
+  background: #efffc0;
+  border-color: #efffc0;
+}
+
+
+.cta-actions .outline-light {
+  background: transparent;
+
+  border: 1px solid rgba(255,255,255,.45);
+
+  color: #ffffff;
+}
+
+
+.cta-actions .outline-light:hover {
+  background: rgba(255,255,255,.08);
+
+  border-color: rgba(255,255,255,.75);
+}
+
+
+.cta-actions p {
+  margin: 5px 0 0;
+
+  color: rgba(255,255,255,.48);
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 30px 6vw;
+
+  background: #f7f8f2;
+
+  border-top: 1px solid rgba(32,37,34,.10);
+
+  color: #69736e;
+
+  font-size: 12px;
+}
+
+
+footer p {
+  margin: 0;
+}
+
+
+.footer-right {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+}
+
+
+.footer-right a {
+  color: #69736e;
+
+  transition: color .2s ease;
+}
+
+
+.footer-right a:hover {
+  color: #168c68;
+}
+
+
+/* =========================================================
+   MOBILE CTA
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .cta {
+    display: block;
+
+    padding: 72px 24px 78px;
+
+    border-radius: 0;
+  }
+
+  .cta h2 {
+    max-width: 600px;
+
+    font-size: clamp(45px, 12vw, 62px);
+    line-height: .96;
+  }
+
+  .cta-description {
+    max-width: 600px;
+
+    margin-top: 23px;
+
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .cta-actions {
+    width: 100%;
+
+    margin-top: 38px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+  }
+
+  .cta-actions .button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .cta-actions p {
+    margin-top: 6px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 28px 20px;
+
+    gap: 18px;
+  }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .cta {
+    padding: 62px 20px 68px;
+  }
+
+  .cta .eyebrow {
+    font-size: 10px;
+    letter-spacing: .18em;
+  }
+
+  .cta h2 {
+    font-size: 45px;
+  }
+
+  .cta-description {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .cta-actions {
+    margin-top: 32px;
+  }
+
+  .cta-actions .button {
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer {
+    padding: 25px 18px;
+  }
+}
