@@ -1521,52 +1521,261 @@ footer {
     font-size: 44px;
   }
 }
+
 /* =========================================================
-   FINAL INSIGHTS OF AYURVEDA — UNIFIED VISUAL THEME
-   Paste at the VERY BOTTOM of style(1).css
+   FINAL INSIGHTS COLOUR SYSTEM
+   Keep the entire website within one visual family
    ========================================================= */
 
 :root {
-  --black: #10251A;
-  --black-soft: #10251A;
 
-  --green: #10251A;
-  --lime: #C7FF32;
+  /* PRIMARY BRAND GREEN */
+  --green: #128c61;
+  --green-dark: #0b5f45;
+  --green-deep: #083d2e;
 
-  --cream: #F5F5EF;
-  --white: #FFFFFF;
+  /* SINGLE ACCENT */
+  --lime: #d9ff3f;
+  --lime-soft: #efffc0;
 
-  --text: #26352D;
-  --grey: #68736D;
-  --muted: #68736D;
+  /* DARK FAMILY */
+  --black: #202321;
+  --black-soft: #303532;
 
-  --border: #D9DED8;
-  --line: #D9DED8;
+  /* LIGHT FAMILY */
+  --white: #ffffff;
+  --cream: #f7f8f2;
+  --cream-dark: #eef1e8;
 
-  --white-line: #FFFFFF;
+  /* ONE NEUTRAL TEXT COLOUR */
+  --grey: #68716c;
+
+  /* SUBTLE BORDERS */
+  --border: rgba(32, 35, 33, 0.12);
 }
 
 
 /* =========================================================
-   REMOVE GRADIENT / FADING EFFECTS
+   GLOBAL TEXT — REMOVE THE BLUE/GREY LOOK
    ========================================================= */
 
 body {
-  background: var(--cream);
-  color: var(--text);
+  background: var(--white);
+  color: var(--black);
 }
+
+.approach-section,
+.intro,
+.care-section,
+.process-section,
+.statement {
+  color: var(--black);
+}
+
+.approach-intro h2,
+.approach-content h3,
+.approach-heading h2,
+.section-heading h2,
+.process-intro h2,
+.process-step h3,
+.statement h2,
+.care-item h3 {
+  color: var(--black);
+}
+
+.approach-description,
+.approach-content p,
+.intro-text,
+.section-heading > p:last-child,
+.care-item p,
+.process-step p {
+  color: var(--grey);
+}
+
+
+/* =========================================================
+   HEADINGS — GREEN ONLY FOR EDITORIAL EMPHASIS
+   ========================================================= */
+
+h1 em,
+h2 em {
+  color: var(--green);
+}
+
+.hero h1 em,
+.doctor-copy h2 em,
+.service-strip h2 em,
+.cta h2 em {
+  color: var(--lime);
+}
+
+
+/* =========================================================
+   APPROACH — WARM WHITE
+   ========================================================= */
+
+.approach-section {
+  background:
+    radial-gradient(
+      circle at 88% 15%,
+      rgba(18, 140, 97, 0.035),
+      transparent 34%
+    ),
+    var(--cream);
+}
+
+
+/* Approach label */
+.approach-label {
+  color: var(--green);
+}
+
+.approach-label span {
+  background: var(--lime);
+}
+
+
+/* Approach italic line */
+.approach-intro h2 em {
+  color: var(--green);
+}
+
+
+/* Approach dividers */
+.approach-list {
+  border-top-color: var(--border);
+}
+
+.approach-item {
+  border-bottom-color: var(--border);
+}
+
+
+/* Approach numbers */
+.approach-number {
+  color: var(--green);
+}
+
+
+/* Approach hover — extremely subtle */
+.approach-item:hover {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(18, 140, 97, 0.035),
+      rgba(217, 255, 63, 0.025),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   HERO — DARK → GREEN MERGE
+   ========================================================= */
 
 .hero {
-  background: var(--black) !important;
+  background:
+    radial-gradient(
+      circle at 88% 48%,
+      rgba(18, 140, 97, 0.72),
+      rgba(18, 140, 97, 0.25) 28%,
+      transparent 52%
+    ),
+    linear-gradient(
+      115deg,
+      #202321 0%,
+      #182d23 42%,
+      #0b5f45 76%,
+      #128c61 100%
+    );
 }
 
-.hero::before,
-.hero::after,
-.hero-art::before,
-.hero-art::after {
-  background: none !important;
-  box-shadow: none !important;
-  opacity: 1 !important;
+
+/* Soft internal glow */
+.hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 72% 55%,
+      rgba(217, 255, 63, 0.06),
+      transparent 30%
+    );
+
+  mix-blend-mode: screen;
+}
+
+
+/* =========================================================
+   DOCTOR SECTION — GREEN WITH NATURAL DEPTH
+   ========================================================= */
+
+.doctor {
+  background:
+    radial-gradient(
+      circle at 100% 15%,
+      rgba(217, 255, 63, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #0b5f45 0%,
+      #128c61 55%,
+      #169567 100%
+    );
+
+  color: var(--white);
+}
+
+
+/* =========================================================
+   SERVICE STRIP — SAME GREEN FAMILY
+   ========================================================= */
+
+.service-strip {
+  background:
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(217, 255, 63, 0.08),
+      transparent 35%
+    ),
+    linear-gradient(
+      110deg,
+      #0b5f45 0%,
+      #128c61 100%
+    );
+
+  color: var(--white);
+}
+
+
+/* =========================================================
+   CTA — DARK WITH GREEN GLOW
+   ========================================================= */
+
+.cta {
+  background:
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(18, 140, 97, 0.42),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 65% 80%,
+      rgba(217, 255, 63, 0.05),
+      transparent 32%
+    ),
+    linear-gradient(
+      120deg,
+      #202321 0%,
+      #182d23 55%,
+      #0b5f45 100%
+    );
 }
 
 
@@ -1575,309 +1784,76 @@ body {
    ========================================================= */
 
 .nav {
-  background: var(--cream) !important;
-  border-bottom: 1px solid var(--border) !important;
-  backdrop-filter: none !important;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom-color: var(--border);
 }
 
-.brand {
-  color: var(--text);
+.nav nav a {
+  color: var(--black-soft);
 }
 
-.brand-light {
-  color: var(--grey);
+.nav nav a:hover {
+  color: var(--green);
 }
 
-nav {
-  color: var(--text) !important;
+.nav .nav-cta {
+  border-color: var(--green);
+  color: var(--green);
 }
 
-nav a:hover {
-  color: var(--green) !important;
-}
-
-.nav-cta {
-  color: var(--green) !important;
-  border-color: var(--green) !important;
-}
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-  background: var(--black) !important;
+.nav .nav-cta:hover {
+  background: var(--green);
   color: var(--white);
 }
 
-.hero h1,
-.hero h2 {
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.button.primary {
+  background: var(--lime);
+  color: var(--black);
+}
+
+.button.light {
+  background: var(--white);
+  color: var(--green-dark);
+}
+
+.button.outline-light {
+  border-color: rgba(255,255,255,0.7);
   color: var(--white);
 }
 
-.hero h1 em {
-  color: var(--lime) !important;
-}
-
-.hero-text {
-  color: #E7ECE8 !important;
-}
-
-.hero .text-link {
-  color: var(--white) !important;
-  border-color: var(--lime) !important;
-}
-
-.trust-row span {
-  color: var(--white) !important;
-  border-color: var(--lime) !important;
-}
-
 
 /* =========================================================
-   OUR APPROACH
+   CARE — KEEP IT QUIET
    ========================================================= */
-
-.approach-section {
-  background: var(--cream) !important;
-  color: var(--text) !important;
-}
-
-.approach-intro h2 {
-  color: var(--text) !important;
-}
-
-.approach-intro h2 em {
-  color: #5F8B72 !important;
-}
-
-.approach-description {
-  color: var(--grey) !important;
-}
-
-.approach-label {
-  color: #5F8B72 !important;
-}
-
-.approach-list {
-  border-color: var(--border) !important;
-}
-
-.approach-item {
-  border-color: var(--border) !important;
-  background: transparent !important;
-}
-
-.approach-item:hover {
-  background: transparent !important;
-}
-
-.approach-number {
-  color: #6D861C !important;
-}
-
-.approach-content h3 {
-  color: var(--text) !important;
-}
-
-.approach-content p {
-  color: var(--grey) !important;
-}
-
-.approach-arrow {
-  color: var(--text) !important;
-  border-color: var(--text) !important;
-}
-
-.approach-item:hover .approach-arrow {
-  background: var(--lime) !important;
-  border-color: var(--lime) !important;
-  color: var(--black) !important;
-}
-
-
-/* =========================================================
-   CARE
-   ========================================================= */
-
-.care-section {
-  background: var(--cream) !important;
-  color: var(--text) !important;
-}
-
-.section-heading h2 {
-  color: var(--text) !important;
-}
-
-.section-heading > p:last-child {
-  color: var(--grey) !important;
-}
-
-.care-list {
-  border-color: var(--border) !important;
-}
-
-.care-item {
-  border-color: var(--border) !important;
-  background: transparent !important;
-}
 
 .care-item:hover {
-  background: transparent !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(18, 140, 97, 0.025),
+      rgba(217, 255, 63, 0.018),
+      transparent
+    );
 }
 
-.care-item > span:first-child {
-  color: #6D861C !important;
-}
-
-.care-item h3 {
-  color: var(--text) !important;
-}
-
-.care-item p {
-  color: var(--grey) !important;
-}
-
+.care-item > span:first-child,
 .item-arrow {
-  color: var(--text) !important;
+  color: var(--green);
 }
 
 
 /* =========================================================
-   DOCTOR SECTION
+   PROCESS
    ========================================================= */
 
-.doctor {
-  background: var(--green) !important;
-  color: var(--white) !important;
-}
-
-.doctor-content {
-  background: var(--green) !important;
-}
-
-.doctor-content h2 {
-  color: var(--white) !important;
-}
-
-.doctor-content h2 em {
-  color: var(--lime) !important;
-}
-
-.doctor-content p {
-  color: #E7ECE8 !important;
-}
-
-.doctor-content .eyebrow {
-  color: var(--lime) !important;
-}
-
-.doctor-content a {
-  color: var(--white) !important;
-  border-color: var(--lime) !important;
-}
-
-
-/* =========================================================
-   FIRST VISIT / CARE JOURNEY
-   ========================================================= */
-
-.intro,
-.care-journey,
-.visit-section {
-  background: var(--cream) !important;
-  color: var(--text) !important;
-}
-
-.intro h2,
-.care-journey h2,
-.visit-section h2 {
-  color: var(--text) !important;
-}
-
-.intro h2 em,
-.care-journey h2 em,
-.visit-section h2 em {
-  color: #5F8B72 !important;
-}
-
-.intro-text,
-.care-journey p,
-.visit-section p {
-  color: var(--grey) !important;
-}
-
-
-/* =========================================================
-   DARK STATEMENT / PROMISE
-   ========================================================= */
-
-.statement {
-  background: var(--black) !important;
-  color: var(--white) !important;
-}
-
-.statement h2 {
-  color: var(--white) !important;
-}
-
-.statement h2 em {
-  color: var(--lime) !important;
-}
-
-.statement > p:last-child {
-  color: #E7ECE8 !important;
-}
-
-
-/* =========================================================
-   CARE CARDS
-   ========================================================= */
-
-.cards {
-  background: var(--cream) !important;
-}
-
-.care-card,
-.care-card.large,
-.care-card.dark {
-  background: var(--green) !important;
-  color: var(--white) !important;
-
-  border-color: var(--green) !important;
-}
-
-.care-card h3,
-.care-card p {
-  color: var(--white) !important;
-}
-
-.care-card p {
-  opacity: 0.9;
-}
-
-.number {
-  color: var(--lime) !important;
-}
-
-
-/* =========================================================
-   CTA
-   ========================================================= */
-
-.cta {
-  background: var(--lime) !important;
-  color: var(--black) !important;
-}
-
-.cta h2,
-.cta p {
-  color: var(--black) !important;
-}
-
-.cta .eyebrow {
-  color: var(--black) !important;
+.process-step > span {
+  background: var(--lime);
+  color: var(--black);
 }
 
 
@@ -1886,59 +1862,82 @@ nav a:hover {
    ========================================================= */
 
 footer {
-  background: var(--black) !important;
-  color: var(--white) !important;
+  background: var(--cream);
+  border-top-color: var(--border);
 }
 
-footer p,
-footer a {
-  color: #E7ECE8 !important;
-}
-
-footer a:hover {
-  color: var(--lime) !important;
+.footer-right {
+  color: var(--grey);
 }
 
 
 /* =========================================================
-   REMOVE RANDOM TRANSPARENCY / FADING
+   REMOVE THE BLUE SHADES FROM OUR PREVIOUS APPROACH CSS
    ========================================================= */
 
-.hero *,
-.doctor *,
-.statement * {
-  text-shadow: none;
+.approach-section,
+.approach-section * {
+  --approach-blue: var(--black);
 }
 
-img {
-  filter: none !important;
+
+/* Explicit overrides for previous blue-grey values */
+.approach-intro h2,
+.approach-content h3 {
+  color: var(--black);
+}
+
+.approach-description,
+.approach-content p {
+  color: var(--grey);
 }
 
 
 /* =========================================================
-   MOBILE
+   SMOOTH SECTION TRANSITIONS
+   Make sections feel connected rather than boxed
    ========================================================= */
 
-@media (max-width: 768px) {
-
-  .nav {
-    background: var(--cream) !important;
-  }
-
-  .hero {
-    background: var(--black) !important;
-  }
-
-  .approach-section,
-  .care-section,
-  .intro,
-  .cards {
-    background: var(--cream) !important;
-  }
-
-  .doctor,
-  .doctor-content,
-  .statement {
-    background: var(--green) !important;
-  }
+.hero {
+  position: relative;
 }
+
+.approach-section {
+  position: relative;
+}
+
+
+/* subtle green fade entering light sections */
+.approach-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 90px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(18, 140, 97, 0.055),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+
+/* subtle dark/green fade before CTA */
+.cta {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   Do NOT introduce additional colours below this point.
+   ========================================================= */
