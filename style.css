@@ -1521,3 +1521,424 @@ footer {
     font-size: 44px;
   }
 }
+/* =========================================================
+   FINAL INSIGHTS OF AYURVEDA — UNIFIED VISUAL THEME
+   Paste at the VERY BOTTOM of style(1).css
+   ========================================================= */
+
+:root {
+  --black: #10251A;
+  --black-soft: #10251A;
+
+  --green: #10251A;
+  --lime: #C7FF32;
+
+  --cream: #F5F5EF;
+  --white: #FFFFFF;
+
+  --text: #26352D;
+  --grey: #68736D;
+  --muted: #68736D;
+
+  --border: #D9DED8;
+  --line: #D9DED8;
+
+  --white-line: #FFFFFF;
+}
+
+
+/* =========================================================
+   REMOVE GRADIENT / FADING EFFECTS
+   ========================================================= */
+
+body {
+  background: var(--cream);
+  color: var(--text);
+}
+
+.hero {
+  background: var(--black) !important;
+}
+
+.hero::before,
+.hero::after,
+.hero-art::before,
+.hero-art::after {
+  background: none !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav {
+  background: var(--cream) !important;
+  border-bottom: 1px solid var(--border) !important;
+  backdrop-filter: none !important;
+}
+
+.brand {
+  color: var(--text);
+}
+
+.brand-light {
+  color: var(--grey);
+}
+
+nav {
+  color: var(--text) !important;
+}
+
+nav a:hover {
+  color: var(--green) !important;
+}
+
+.nav-cta {
+  color: var(--green) !important;
+  border-color: var(--green) !important;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  background: var(--black) !important;
+  color: var(--white);
+}
+
+.hero h1,
+.hero h2 {
+  color: var(--white);
+}
+
+.hero h1 em {
+  color: var(--lime) !important;
+}
+
+.hero-text {
+  color: #E7ECE8 !important;
+}
+
+.hero .text-link {
+  color: var(--white) !important;
+  border-color: var(--lime) !important;
+}
+
+.trust-row span {
+  color: var(--white) !important;
+  border-color: var(--lime) !important;
+}
+
+
+/* =========================================================
+   OUR APPROACH
+   ========================================================= */
+
+.approach-section {
+  background: var(--cream) !important;
+  color: var(--text) !important;
+}
+
+.approach-intro h2 {
+  color: var(--text) !important;
+}
+
+.approach-intro h2 em {
+  color: #5F8B72 !important;
+}
+
+.approach-description {
+  color: var(--grey) !important;
+}
+
+.approach-label {
+  color: #5F8B72 !important;
+}
+
+.approach-list {
+  border-color: var(--border) !important;
+}
+
+.approach-item {
+  border-color: var(--border) !important;
+  background: transparent !important;
+}
+
+.approach-item:hover {
+  background: transparent !important;
+}
+
+.approach-number {
+  color: #6D861C !important;
+}
+
+.approach-content h3 {
+  color: var(--text) !important;
+}
+
+.approach-content p {
+  color: var(--grey) !important;
+}
+
+.approach-arrow {
+  color: var(--text) !important;
+  border-color: var(--text) !important;
+}
+
+.approach-item:hover .approach-arrow {
+  background: var(--lime) !important;
+  border-color: var(--lime) !important;
+  color: var(--black) !important;
+}
+
+
+/* =========================================================
+   CARE
+   ========================================================= */
+
+.care-section {
+  background: var(--cream) !important;
+  color: var(--text) !important;
+}
+
+.section-heading h2 {
+  color: var(--text) !important;
+}
+
+.section-heading > p:last-child {
+  color: var(--grey) !important;
+}
+
+.care-list {
+  border-color: var(--border) !important;
+}
+
+.care-item {
+  border-color: var(--border) !important;
+  background: transparent !important;
+}
+
+.care-item:hover {
+  background: transparent !important;
+}
+
+.care-item > span:first-child {
+  color: #6D861C !important;
+}
+
+.care-item h3 {
+  color: var(--text) !important;
+}
+
+.care-item p {
+  color: var(--grey) !important;
+}
+
+.item-arrow {
+  color: var(--text) !important;
+}
+
+
+/* =========================================================
+   DOCTOR SECTION
+   ========================================================= */
+
+.doctor {
+  background: var(--green) !important;
+  color: var(--white) !important;
+}
+
+.doctor-content {
+  background: var(--green) !important;
+}
+
+.doctor-content h2 {
+  color: var(--white) !important;
+}
+
+.doctor-content h2 em {
+  color: var(--lime) !important;
+}
+
+.doctor-content p {
+  color: #E7ECE8 !important;
+}
+
+.doctor-content .eyebrow {
+  color: var(--lime) !important;
+}
+
+.doctor-content a {
+  color: var(--white) !important;
+  border-color: var(--lime) !important;
+}
+
+
+/* =========================================================
+   FIRST VISIT / CARE JOURNEY
+   ========================================================= */
+
+.intro,
+.care-journey,
+.visit-section {
+  background: var(--cream) !important;
+  color: var(--text) !important;
+}
+
+.intro h2,
+.care-journey h2,
+.visit-section h2 {
+  color: var(--text) !important;
+}
+
+.intro h2 em,
+.care-journey h2 em,
+.visit-section h2 em {
+  color: #5F8B72 !important;
+}
+
+.intro-text,
+.care-journey p,
+.visit-section p {
+  color: var(--grey) !important;
+}
+
+
+/* =========================================================
+   DARK STATEMENT / PROMISE
+   ========================================================= */
+
+.statement {
+  background: var(--black) !important;
+  color: var(--white) !important;
+}
+
+.statement h2 {
+  color: var(--white) !important;
+}
+
+.statement h2 em {
+  color: var(--lime) !important;
+}
+
+.statement > p:last-child {
+  color: #E7ECE8 !important;
+}
+
+
+/* =========================================================
+   CARE CARDS
+   ========================================================= */
+
+.cards {
+  background: var(--cream) !important;
+}
+
+.care-card,
+.care-card.large,
+.care-card.dark {
+  background: var(--green) !important;
+  color: var(--white) !important;
+
+  border-color: var(--green) !important;
+}
+
+.care-card h3,
+.care-card p {
+  color: var(--white) !important;
+}
+
+.care-card p {
+  opacity: 0.9;
+}
+
+.number {
+  color: var(--lime) !important;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta {
+  background: var(--lime) !important;
+  color: var(--black) !important;
+}
+
+.cta h2,
+.cta p {
+  color: var(--black) !important;
+}
+
+.cta .eyebrow {
+  color: var(--black) !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  background: var(--black) !important;
+  color: var(--white) !important;
+}
+
+footer p,
+footer a {
+  color: #E7ECE8 !important;
+}
+
+footer a:hover {
+  color: var(--lime) !important;
+}
+
+
+/* =========================================================
+   REMOVE RANDOM TRANSPARENCY / FADING
+   ========================================================= */
+
+.hero *,
+.doctor *,
+.statement * {
+  text-shadow: none;
+}
+
+img {
+  filter: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .nav {
+    background: var(--cream) !important;
+  }
+
+  .hero {
+    background: var(--black) !important;
+  }
+
+  .approach-section,
+  .care-section,
+  .intro,
+  .cards {
+    background: var(--cream) !important;
+  }
+
+  .doctor,
+  .doctor-content,
+  .statement {
+    background: var(--green) !important;
+  }
+}
