@@ -2940,3 +2940,275 @@ img {
     line-height: 1.55;
   }
 }
+/* =========================================================
+   CARE — WHERE IT MAKES SENSE
+   Mobile refinement
+   ========================================================= */
+
+.care-section {
+  background: #f7f8f2;
+  color: #202522;
+
+  padding: 110px 6vw 125px;
+}
+
+.section-heading {
+  max-width: 850px;
+  margin-bottom: 65px;
+}
+
+.section-heading .eyebrow {
+  color: #168c68;
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  color: #202522;
+
+  font-size: clamp(46px, 5.5vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 400;
+}
+
+.section-heading h2 em {
+  color: #168c68;
+}
+
+.section-heading > p:last-child {
+  max-width: 650px;
+
+  margin-top: 25px;
+
+  color: #69736e;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* ---------- CARE LIST ---------- */
+
+.care-list {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+
+.care-item {
+  display: grid;
+
+  grid-template-columns: 65px minmax(0, 1fr) 45px;
+
+  align-items: start;
+
+  gap: 20px;
+
+  padding: 32px 0;
+
+  border-top: 1px solid rgba(32,37,34,0.14);
+
+  transition:
+    padding-left .25s ease,
+    background .25s ease;
+}
+
+.care-item:last-child {
+  border-bottom: 1px solid rgba(32,37,34,0.14);
+}
+
+
+/* Number */
+
+.care-item > span:first-child {
+  color: #168c68;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .16em;
+
+  padding-top: 5px;
+}
+
+
+/* Content */
+
+.care-item h3 {
+  margin: 0 0 9px;
+
+  color: #202522;
+
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.care-item p {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: #69736e;
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+
+/* Arrow */
+
+.item-arrow {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(32,37,34,.22);
+  border-radius: 50%;
+
+  color: #168c68;
+
+  font-size: 17px;
+
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    color .25s ease,
+    transform .25s ease;
+}
+
+.care-item:hover {
+  padding-left: 10px;
+}
+
+.care-item:hover .item-arrow {
+  background: #d9ff3f;
+  border-color: #d9ff3f;
+
+  color: #202522;
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .care-section {
+    padding: 78px 24px 85px;
+  }
+
+  .section-heading {
+    margin-bottom: 42px;
+  }
+
+  .section-heading .eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(43px, 11vw, 58px);
+    line-height: .98;
+  }
+
+  .section-heading > p:last-child {
+    margin-top: 22px;
+
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+
+  /* One clean vertical system */
+
+  .care-item {
+    grid-template-columns: 40px minmax(0, 1fr) 36px;
+
+    gap: 12px;
+
+    padding: 25px 0;
+  }
+
+  .care-item > span:first-child {
+    font-size: 11px;
+    padding-top: 4px;
+  }
+
+  .care-item h3 {
+    font-size: 20px;
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+  }
+
+  .care-item p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .item-arrow {
+    width: 32px;
+    height: 32px;
+
+    font-size: 14px;
+  }
+
+  /* No movement on touch */
+
+  .care-item:hover {
+    padding-left: 0;
+  }
+
+  .care-item:hover .item-arrow {
+    background: transparent;
+    border-color: rgba(32,37,34,.22);
+    color: #168c68;
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .care-section {
+    padding: 68px 20px 72px;
+  }
+
+  .section-heading {
+    margin-bottom: 34px;
+  }
+
+  .section-heading h2 {
+    font-size: 42px;
+  }
+
+  .care-item {
+    grid-template-columns: 34px minmax(0,1fr) 32px;
+
+    gap: 9px;
+
+    padding: 23px 0;
+  }
+
+  .care-item h3 {
+    font-size: 19px;
+  }
+
+  .care-item p {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  .item-arrow {
+    width: 29px;
+    height: 29px;
+  }
+}
