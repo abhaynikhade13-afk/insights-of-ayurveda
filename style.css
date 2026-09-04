@@ -1994,3 +1994,24 @@ footer {
   font-variant-emoji: text;
   -webkit-font-smoothing: antialiased;
 }
+/* =====================================================
+   HERO — DR. RUCHIKA HIGHLIGHT
+   ===================================================== */
+
+.hero-doctor-highlight {
+  font-weight: 700;
+  color: inherit;
+
+  /* Neon lime / mint marker behind the text */
+  background: linear-gradient(
+    to top,
+    rgba(200, 255, 24, 0.70) 0%,
+    rgba(200, 255, 24, 0.70) 55%,
+    transparent 55%
+  );
+
+  padding: 0 3px 2px;
+
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
