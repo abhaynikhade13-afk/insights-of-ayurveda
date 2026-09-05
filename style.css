@@ -2293,3 +2293,10 @@ footer {
   font-size: 15px;
   line-height: 1.7;
 }
+/* Match First Visit eyebrow to Doctor section */
+.process-intro .eyebrow {
+  font-size: 11px !important;
+  letter-spacing: .18em;
+  line-height: 1.2;
+  font-weight: 700;
+}
