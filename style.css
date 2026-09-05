@@ -2041,3 +2041,238 @@ footer {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
+/* =========================================================
+   FIRST VISIT — EDITORIAL TIMELINE
+   Added as a safe override. Do not remove existing CSS.
+   ========================================================= */
+
+.process-section {
+  position: relative;
+}
+
+/* Heading hierarchy */
+.process-intro h2 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  letter-spacing: -.055em;
+  color: var(--ink);
+}
+
+.process-intro h2 em {
+  display: block;
+  margin-top: 4px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--green);
+}
+
+/* Intro paragraph */
+.process-intro > p {
+  max-width: 520px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Timeline */
+.process-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 8px;
+}
+
+/* Connecting line */
+.process-list::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  bottom: 25px;
+  width: 1px;
+  background: rgba(17,139,105,.18);
+}
+
+/* Individual step */
+.process-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 20px;
+  padding: 20px 20px 20px 0;
+  border-bottom: 1px solid rgba(23,34,28,.10);
+  transition:
+    background .3s ease,
+    padding-left .3s ease;
+}
+
+.process-item:last-child {
+  border-bottom: 0;
+}
+
+/* Number circle */
+.process-number {
+  position: relative;
+  z-index: 2;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(17,139,105,.25);
+  border-radius: 50%;
+
+  background: var(--cream);
+  color: var(--green);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+
+  transition:
+    background .3s ease,
+    color .3s ease,
+    border-color .3s ease,
+    transform .3s ease;
+}
+
+/* Text */
+.process-item h3 {
+  margin: 4px 0 8px;
+
+  color: var(--ink);
+
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -.035em;
+  line-height: 1.1;
+}
+
+.process-item p {
+  max-width: 520px;
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* First step gets the visual accent */
+.process-item:first-child .process-number {
+  background: var(--lime);
+  border-color: var(--lime);
+  color: var(--ink);
+}
+
+/* Desktop hover */
+@media (min-width: 901px) {
+  .process-item:hover {
+    padding-left: 10px;
+    background: rgba(199,255,50,.045);
+  }
+
+  .process-item:hover .process-number {
+    transform: scale(1.08);
+    border-color: var(--green);
+  }
+}
+
+/* Closing statement */
+.process-note {
+  max-width: 600px;
+  margin: 28px 0 0;
+  padding: 18px 20px;
+
+  border-left: 3px solid var(--lime);
+
+  background: rgba(199,255,50,.08);
+
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.process-note strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* CTA */
+.process-cta {
+  margin-top: 24px;
+}
+
+.process-cta .text-link {
+  color: var(--ink);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .process-section {
+    padding: 55px 5vw;
+  }
+
+  .process-intro h2 {
+    font-size: clamp(42px, 11vw, 58px);
+  }
+
+  .process-intro > p {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .process-list {
+    padding-left: 0;
+  }
+
+  .process-list::before {
+    left: 21px;
+    top: 22px;
+    bottom: 22px;
+  }
+
+  .process-item {
+    grid-template-columns: 42px 1fr;
+    column-gap: 15px;
+    padding: 17px 0;
+  }
+
+  .process-number {
+    width: 42px;
+    height: 42px;
+    font-size: 9px;
+  }
+
+  .process-item h3 {
+    margin-top: 2px;
+    margin-bottom: 6px;
+    font-size: 17px;
+  }
+
+  .process-item p {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .process-note {
+    margin-top: 22px;
+    padding: 15px 16px;
+    font-size: 12px;
+  }
+
+  .process-cta {
+    margin-top: 20px;
+  }
+}
