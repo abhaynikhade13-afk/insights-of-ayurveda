@@ -2276,3 +2276,20 @@ footer {
     margin-top: 20px;
   }
 }
+/* Fix First Visit eyebrow size */
+.process-intro .eyebrow {
+  font-size: 11px;
+  line-height: 1.2;
+  margin: 0 0 18px;
+  letter-spacing: .18em;
+  font-weight: 700;
+}
+
+/* Keep the actual intro paragraph separate */
+.process-intro > p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
