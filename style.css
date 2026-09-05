@@ -2017,3 +2017,27 @@ footer {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
+/* =====================================================
+   INSIGHTS EDITORIAL BRUSH HIGHLIGHTS
+   ===================================================== */
+
+.text-highlight {
+  position: relative;
+  display: inline;
+  z-index: 0;
+  padding: 0 3px;
+  font-weight: inherit;
+
+  background-image: linear-gradient(
+    178deg,
+    transparent 0%,
+    transparent 48%,
+    rgba(200, 255, 24, 0.45) 48%,
+    rgba(200, 255, 24, 0.45) 88%,
+    transparent 88%
+  );
+
+  background-repeat: repeat;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
